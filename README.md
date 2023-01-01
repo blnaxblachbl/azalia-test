@@ -19,19 +19,16 @@ npm install
 ```
 yarn android
 ```
-
-или  
-
-```npm run android
+или 
 ```
-
+npm run android
+```
 или
-
-```yarn ios
 ```
-
+yarn ios
+```
 или  
-
-```npm run ios
+```
+npm run ios
 ```
 Убедитесь что на вашей машине установлены все необходимое ПО для того чтобы запустить проект.
