@@ -18,14 +18,14 @@ const Add = () => {
     const [value, setValue] = useState("")
 
     const addNewTask = () => {
-        const text = value.replace(/ /gm, '')
-        if (text) {
+        const valid = value.replace(/ /gm, '')
+        if (valid) {
             dispatch({
                 type: "addTask",
                 data: {
                     id: new Date().getTime(),
                     done: false,
-                    text
+                    text: value
                 }
             })
             toast.success("Задача добавлена")
