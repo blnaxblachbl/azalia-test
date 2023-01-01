@@ -3,7 +3,7 @@ import { UIManager, Platform } from "react-native"
 
 import Router from "./routes"
 import StateProvider from './store'
-import { Toast } from "./components"
+import { Toast, SafeAreaView } from "./components"
 
 const App = () => {
 
@@ -14,10 +14,12 @@ const App = () => {
     }, [])
 
     return (
-        <StateProvider>
-            <Router />
-            <Toast />
-        </StateProvider>
+        <SafeAreaView>
+            <StateProvider>
+                <Router />
+                <Toast />
+            </StateProvider>
+        </SafeAreaView>
     )
 }
 

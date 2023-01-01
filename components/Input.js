@@ -24,7 +24,7 @@ export const Input = forwardRef(({
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        paddingHorizontal: 12,
+        padding: 12,
         borderRadius: 8,
         backgroundColor: COLORS.secondary.white,
         elevation: 2,

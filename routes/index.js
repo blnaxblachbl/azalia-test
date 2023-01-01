@@ -51,6 +51,7 @@ const Router = () => {
                         color: COLORS.secondary.black,
                         fontSize: 28
                     },
+                    headerTintColor: COLORS.primary.black,
                     presentation: 'transparentModal',
                     headerStatusBarHeight: 0
                 }}

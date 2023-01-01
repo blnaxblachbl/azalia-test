@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import {
-    View,
     ScrollView,
-    Image,
+    KeyboardAvoidingView,
     StyleSheet
 } from 'react-native'
 
@@ -37,23 +36,25 @@ const Add = () => {
     }
 
     return (
-        <ScrollView
-            style={styles.container}
-            contentContainerStyle={styles.contentContainer}
-        >
-            <Input
-                value={value}
-                placeholder={'Текст новой задачи'}
-                style={styles.input}
-                onChangeText={text => setValue(text)}
-                onSubmitEditing={addNewTask}
-            />
-            <Button
-                text="Добавить"
-                onPress={addNewTask}
-                disable={value.length === 0}
-            />
-        </ScrollView>
+        <KeyboardAvoidingView style={{ flex: 1 }} behavior='height'>
+            <ScrollView
+                style={styles.container}
+                contentContainerStyle={styles.contentContainer}
+            >
+                <Input
+                    value={value}
+                    placeholder={'Текст новой задачи'}
+                    style={styles.input}
+                    onChangeText={text => setValue(text)}
+                    onSubmitEditing={addNewTask}
+                />
+                <Button
+                    text="Добавить"
+                    onPress={addNewTask}
+                    disable={value.length === 0}
+                />
+            </ScrollView>
+        </KeyboardAvoidingView>
     )
 }
 

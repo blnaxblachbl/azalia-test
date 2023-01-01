@@ -17,11 +17,11 @@ import Animated, {
     runOnJS
 } from 'react-native-reanimated'
 import { PanGestureHandler } from 'react-native-gesture-handler'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
+import { toast } from "./Toast"
 import { useStateValue } from "../store"
 import { COLORS } from "../utils/const"
-import { Icon } from "./Icon"
-import { toast } from "./Toast"
 
 const { width } = Dimensions.get("window")
 const limit = width / 3
@@ -82,8 +82,7 @@ export const Task = ({ item = null }) => {
             >
                 <TouchableWithoutFeedback onPress={switchDone}>
                     <View style={styles.container}>
-
-                        <Icon name={item.done ? "checked" : "unchecked"} size={24} color={COLORS.primary.black} />
+                        <MaterialIcons name={item.done ? "check-box" : "check-box-outline-blank"} size={24} color={COLORS.primary.black} />
                         <Text style={[styles.text, item.done ? styles.textDone : undefined]}>{item.text}</Text>
                     </View>
                 </TouchableWithoutFeedback>
