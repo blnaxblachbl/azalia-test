@@ -3,5 +3,7 @@
 Чтобы запустить проект:
 1) Установите node_modules командой
 > yarn install
-или
+
+или  
+
 > npm install
